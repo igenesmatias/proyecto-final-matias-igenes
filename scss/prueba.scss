@@ -1,0 +1,76 @@
+@import "nav";
+@import "main"; 
+@import "variables";
+@import "grids";
+
+/* estilo imagenes */
+img {
+    height: 40em;
+    display: block;
+    margin: 0px auto;
+    
+}
+
+/* estilo card bootstrap */ 
+.card-img-top {
+    width: 80% !important;
+    height: 60%;}
+  
+.card {
+    border-style: none;
+    background-color: #4b515a;}
+
+
+
+div {
+    padding: $spacing-1;
+    background-color: $color-primary;
+}
+
+$redes: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        send-mail: #C25E30
+); 
+
+/*bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       background-color: $color;
+   }
+}
+
+/* map-get */ 
+$estilos: (
+  color: #3673D9,
+  centro: center,
+  tFuente: 15px,
+  1rem : 0.5rem
+);
+
+div {
+  background-color: map-get($estilos, color);
+  text-align: map-get($estilos, centro);
+  padding: map-get($estilos, 1rem);
+  font-size:map-get($estilos, tFuente);
+}
+
+/* Agregando mixin */
+@mixin flex-row-center{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+.box {
+   @include flex-rox-center;
+}
+
+.card-body {
+    text-align: center !important;
+}
+  
+
+.sitio-en-construccion {
+    width: 100%;
+    height: auto;
+}

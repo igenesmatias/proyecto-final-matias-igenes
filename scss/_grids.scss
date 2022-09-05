@@ -1,0 +1,32 @@
+.contenedor {
+    display: grid;
+    grid-template-areas: "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+}
+  
+.contenedor div {
+    color: #000000;
+    text-align: left;
+}
+  /* fondo del body */
+body {
+    margin: 5px;
+}
+.item-1 {
+    grid-area: header;
+}
+  
+.item-2 {
+    grid-area: nav;
+}
+  
+.item-3 {
+    grid-area: main;
+}
+  
+.item-4 {
+    grid-area: footer;
+      
+}
